@@ -159,7 +159,6 @@ footer {
     bottom: 0; /* Posición en la parte inferior */
     left: 0; /* Alineación a la izquierda */
     right: 0; /* Alineación a la derecha */
-    background-color: var(--col-dark); /* Color de fondo */
     padding: 1px 0; /* Espaciado vertical */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
@@ -171,7 +170,7 @@ section {
     width: 100%; /* Asegura que ocupe todo el ancho */
 }
 section {
-    --col-orange: #d17842;
+    --col-orange: #ffff;
     --col-dark: #0c0f14;
     --col-darkGray: #52555a;
     --col-gray: #aeaeae;
@@ -198,7 +197,7 @@ section {
     width: 14px;
   }
   .label:hover:not(:has(input:checked)) > svg {
-    fill: #d17842;
+    fill: #ffff;
     opacity: 0.6;
   }
   .label::before {
