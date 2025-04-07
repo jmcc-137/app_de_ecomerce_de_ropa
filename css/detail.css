@@ -183,3 +183,29 @@ dialog::backdrop {
   .views{
     color: rgb(52, 92, 226);
   }
+  .opcion{
+    display: flex;
+
+  }
+  .part1{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+  }
+  .icon{
+   
+    width: 35px;
+    height: 35px;
+    border-radius:50%;
+    border: 1px solid var(--tercerColor);
+    background-color: white;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 0;
+    transition: background-color 0.2s ease;
+  }
+  .icon:hover{
+    background-color: var(--primerColor);
+    color: var(--tercerColor);
+  }
