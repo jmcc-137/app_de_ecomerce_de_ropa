@@ -1,11 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="/css/checkout.css" />
 </head>
 <body>
+    <header class="header">
+        <nav class="navbar">
+            <!-- Botón volver -->
+            <button class="icon-button">
+                <a href="/views/detail.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" href="/views/detail.html">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg></a>
+                
+            </button>
+
+            <!-- Título centrado -->
+            <h1 class="header-title">Checkout</h1>
+
+            <!-- Menú hamburguesa -->
+            <label for="menu_hamburguesa" class="icon-button hamburger-label">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M4 12h16M4 6h16M4 18h16"/>
+                </svg>
+            </label>
+
+            <input class="menu_hamburguesa" type="checkbox" id="menu_hamburguesa"/>
+
+            <!-- Menú desplegable -->
+            <ul class="ul_links">
+                <li><a href="#" class="link">Inicio</a></li>
+                <li><a href="#" class="link">Sobre mí</a></li>
+                <li><a href="#" class="link">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="cart-item">
+            <img src="/storage/img/c1.png" alt="Producto" class="product-img" />
+          
+            <div class="product-info">
+              <div class="top-row">
+                <div>
+                  <h3 class="product-title">Modern light clothes</h3>
+                  <p class="product-desc">Dress modern</p>
+                </div>
+                <button class="options-btn">⋯</button>
+              </div>
+          
+              <div class="bottom-row">
+                <p class="product-price">$212.99</p>
+                <div class="quantity-control">
+                  <button class="quantity-btn" onclick="decrease(this)">−</button>
+                  <span class="quantity">4</span>
+                  <button class="quantity-btn" onclick="increase(this)">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Segundo producto -->
+          <div class="cart-item">
+            <img src="/storage/img/c2.png" alt="Producto" class="product-img" />
+          
+            <div class="product-info">
+              <div class="top-row">
+                <div>
+                  <h3 class="product-title">Modern light clothes</h3>
+                  <p class="product-desc">Dress modern</p>
+                </div>
+                <button class="options-btn">⋯</button>
+              </div>
+          
+              <div class="bottom-row">
+                <p class="product-price">$162.99</p>
+                <div class="quantity-control">
+                  <button class="quantity-btn" onclick="decrease(this)">−</button>
+                  <span class="quantity">1</span>
+                  <button class="quantity-btn" onclick="increase(this)">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="shipping-summary">
+            <h3 class="summary-title">Shipping Information</h3>
+          
+            <div class="payment-method">
+              <img src="/storage/img/Default Icon.png" alt="Visa" class="card-icon" />
+              <span class="card-number">**** **** **** 2143</span>
+              <button class="dropdown-btn">⌄</button>
+            </div>
+          
+            <div class="summary-details">
+              <div class="summary-row">
+                <span>Total (9 items)</span>
+                <span class="bold">$1,014.95</span>
+              </div>
+              <div class="summary-row">
+                <span>Shipping Fee</span>
+                <span>$0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Discount</span>
+                <span>$0.00</span>
+              </div>
+          
+              <hr class="divider" />
+          
+              <div class="summary-row">
+                <span class="bold">Sub Total</span>
+                <span class="bold">$1,014.95</span>
+              </div>
+            </div>
+          </div>
+    </section>
+    <footer>
+        <div class="buy">
+            <a id="showAlert">buy</a>
+        </div>
+    </footer>
     
+
+      
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/checkout.js"></script>
 </body>
 </html>

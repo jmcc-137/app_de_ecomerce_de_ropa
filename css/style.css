@@ -1,335 +1,431 @@
+@import url(/css/variables.css);
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Encode Sans', sans-serif;
+  padding-bottom: 70px; /* Espacio para el footer */
 }
 
 header {
-    background-color: #fff;
-    padding: 20px;
-    text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
 }
 
 header h1 {
-    margin: 0;
+  margin: 0;
 }
 
 header h2 {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 nav {
-    text-align: center;
+  text-align: center;
 }
 
 .barra {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
-    gap: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 8px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .buscador {
-    display: flex; 
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
 }
 
 .buscador input {
-    padding: 15px;
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    margin: 10px;
+  padding: 15px;
+  width: 100%;
+  max-width: 600px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px;
 }
 
 .configuracion {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
 }
 
 /* Contenedor de categorías */
 .categorias {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    gap: 10px;
-    padding: 10px;
-    width: 100%;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
 
-
 .categorias::-webkit-scrollbar {
-    display: none; 
+  display: none;
 }
 
 .categorias .item {
-    display: inline-flex;
-    align-items: center;
-    border: 0.2px solid black;
-    border-radius: 14px;
-    padding: 10px 20px;
-    background-color: white;
-    flex-shrink: 0; 
+  display: inline-flex;
+  align-items: center;
+  border: 0.2px solid black;
+  border-radius: 14px;
+  padding: 10px 20px;
+  background-color: white;
+  flex-shrink: 0;
 }
 
 .categorias .item a {
-    display: flex;
-    align-items: center;
-    gap: 8px; 
-    text-decoration: none;
-    color: black;
-    font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
 }
 
-
-
 .categorias .item a img {
-    color: white;
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
+  color: white;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 /* encabezado */
 .encabezado {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .encabezado .parte2 img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 /* Contenedor de cartas */
 .cartas-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 8px;
-    padding: 20px;
-    background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  padding: 20px;
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.card {
-    width: 150px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+.cartas-container a {
+  text-decoration: none;
+  color: var(--cuartoColor);
 }
 
-.card img {
-    width: 100%;
-    height: auto;
+.card, .card1 {
+  width: 100%;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.card1 {
+  background-color: var(--cuartoColor);
+}
+
+.card img, .card1 img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .card-content {
-    padding: 16px;
+  padding: 16px;
 }
 
-.card-content h1 {
-    font-size: 16px;
-    margin-bottom: 8px;
+.card-content h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #000;
 }
 
-.card {
-    position: relative; /* Permite el posicionamiento absoluto de los elementos hijos */
+.category {
+  color: #555;
+  font-size: 14px;
+}
+
+.price-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-weight: bold;
+  color: #000;
+}
+
+.rating {
+  color: #555;
+  font-size: 14px;
 }
 
 .heart-container {
-    position: absolute; /* Posiciona el contenedor de corazón de forma absoluta */
-    top: 1px; /* Ajusta la distancia desde la parte superior */
-    left: 100px; /* Ajusta la distancia desde la derecha */
-    z-index: 1; /* Asegura que esté por encima de otros elementos */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
 }
+
 footer {
-    display: flex;
-    justify-content: center;
-    position: fixed; /* Fija el menú en la parte inferior */
-    bottom: 0; /* Posición en la parte inferior */
-    left: 0; /* Alineación a la izquierda */
-    right: 0; /* Alineación a la derecha */
-    padding: 1px 0; /* Espaciado vertical */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 0;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
 section {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%; /* Asegura que ocupe todo el ancho */
+  --col-orange: #ffff;
+  --col-dark: #0c0f14;
+  --col-darkGray: #52555a;
+  --col-gray: #aeaeae;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: var(--col-dark);
+  border-radius: 30px;
+  padding: 5px;
 }
-section {
-    --col-orange: #ffff;
-    --col-dark: #0c0f14;
-    --col-darkGray: #52555a;
-    --col-gray: #aeaeae;
-  
-    width: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    background-color: var(--col-dark);
-    border-radius: 30px;
+
+.label {
+  padding: 10px 15px;
+  transition: all 200ms;
+  display: inline-flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.label input[type="radio"] {
+  display: none;
+}
+
+.label>svg {
+  transition: all 200ms;
+  fill: var(--col-gray);
+  width: 14px;
+}
+
+.label:hover:not(:has(input:checked))>svg {
+  fill: #ffff;
+  opacity: 0.6;
+}
+
+.label::before {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  border-radius: 5px;
+  position: relative;
+  left: 50%;
+  top: 20px;
+  background: var(--col-orange);
+  transition: all 200ms;
+}
+
+.label>svg {
+  transition: 300ms;
+  fill: var(--col-darkGray);
+  margin-top: 0;
+}
+
+.label:has(input:checked)>svg {
+  fill: var(--col-orange);
+  scale: 1.2;
+  margin-top: -5px;
+}
+
+.label:has(input:checked)::before {
+  width: 100%;
+  left: 0;
+  top: 25px;
+}
+
+.heart-container {
+  --heart-color: rgb(247, 241, 243);
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  transition: .3s;
+}
+
+.heart-container .checkbox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+.heart-container .svg-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-container .svg-outline,
+.heart-container .svg-filled {
+  fill: var(--heart-color);
+  position: absolute;
+}
+
+.heart-container .svg-filled {
+  animation: keyframes-svg-filled 1s;
+  display: none;
+}
+
+.heart-container .svg-celebrate {
+  position: absolute;
+  animation: keyframes-svg-celebrate .5s;
+  animation-fill-mode: forwards;
+  display: none;
+  stroke: var(--heart-color);
+  fill: var(--heart-color);
+  stroke-width: 2px;
+}
+
+.heart-container .checkbox:checked~.svg-container .svg-filled {
+  display: block
+}
+
+.heart-container .checkbox:checked~.svg-container .svg-celebrate {
+  display: block
+}
+
+@keyframes keyframes-svg-filled {
+  0% {
+    transform: scale(0);
   }
-  .label {
-    padding: 10px 30px;
-    transition: all 200ms;
-    display: inline-block;
+
+  25% {
+    transform: scale(1.2);
   }
-  
-  .label input[type="radio"] {
-    display: none;
+
+  50% {
+    transform: scale(1);
+    filter: brightness(1.5);
   }
-  .label > svg {
-    transition: all 200ms;
-    fill: var(--col-gray);
-    width: 14px;
+}
+
+@keyframes keyframes-svg-celebrate {
+  0% {
+    transform: scale(0);
   }
-  .label:hover:not(:has(input:checked)) > svg {
-    fill: #ffff;
-    opacity: 0.6;
+
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
   }
-  .label::before {
-    content: "";
-    display: block;
-    width: 0%;
-    height: 2px;
-    border-radius: 5px;
-    position: relative;
-    left: 50%;
-    top: 20px;
-    background: var(--col-orange);
-    transition: all 200ms;
-  }
-  .label > svg {
-    transition: 300ms;
-    fill: var(--col-darkGray);
-    margin-top: 0;
-  }
-  .label:has(input:checked) > svg {
-    fill: var(--col-orange);
-    scale: 1.2;
-    margin-top: -5px;
-  }
-  
-  .label:has(input:checked)::before {
-    width: 100%;
-    left: 0;
-    top: 25px;
-  }
-  .heart-container {
-    --heart-color: rgb(255, 91, 137);
-    position: absolute;
-    width: 30px;
-    height: 50px;
-    transition: .3s;
-  }
-  
-  .heart-container .checkbox {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+
+  100% {
+    transform: scale(1.4);
     opacity: 0;
-    z-index: 20;
-    cursor: pointer;
-  }
-  
-  .heart-container .svg-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .heart-container .svg-outline,
-          .heart-container .svg-filled {
-    fill: var(--heart-color);
-    position: absolute;
-  }
-  
-  .heart-container .svg-filled {
-    animation: keyframes-svg-filled 1s;
     display: none;
   }
-  
-  .heart-container .svg-celebrate {
-    position: absolute;
-    animation: keyframes-svg-celebrate .5s;
-    animation-fill-mode: forwards;
-    display: none;
-    stroke: var(--heart-color);
-    fill: var(--heart-color);
-    stroke-width: 2px;
-  }
-  
-  .heart-container .checkbox:checked~.svg-container .svg-filled {
-    display: block
-  }
-  
-  .heart-container .checkbox:checked~.svg-container .svg-celebrate {
-    display: block
-  }
-  
-  @keyframes keyframes-svg-filled {
-    0% {
-      transform: scale(0);
-    }
-  
-    25% {
-      transform: scale(1.2);
-    }
-  
-    50% {
-      transform: scale(1);
-      filter: brightness(1.5);
-    }
-  }
-  
-  @keyframes keyframes-svg-celebrate {
-    0% {
-      transform: scale(0);
-    }
-  
-    50% {
-      opacity: 1;
-      filter: brightness(1.5);
-    }
-  
-    100% {
-      transform: scale(1.4);
-      opacity: 0;
-      display: none;
-    }
-  }
+}
+
 /* Media queries para responsividad */
 @media (min-width: 768px) {
-    .cartas-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .cartas-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .buscador input {
+    max-width: 800px;
+  }
+
+  .categorias {
+    justify-content: center;
+  }
 }
 
-@media (max-width: 767px) {
-    .cartas-container {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .buscador input {
-        width: 80%;
-    }
-    
-    .encabezado {
-        padding: 0 10px;
-    }
+@media (min-width: 1024px) {
+  .cartas-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .cartas-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .buscador input {
+    width: 100%;
+    margin: 5px;
+  }
+
+  .encabezado {
+    padding: 0 10px;
+  }
+
+  .label {
+    padding: 10px;
+  }
+}
+
+/* Orientación horizontal en móviles */
+@media (max-width: 767px) and (orientation: landscape) {
+  .cartas-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  footer {
+    padding: 5px 0;
+  }
+
+  .label {
+    padding: 8px 10px;
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 320px) {
+  .cartas-container {
+    grid-template-columns: 1fr;
+  }
+
+  .categorias .item {
+    padding: 8px 15px;
+  }
+
+  .categorias .item a {
+    font-size: 12px;
+  }
 }
